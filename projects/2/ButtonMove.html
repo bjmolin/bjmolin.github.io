@@ -9,24 +9,15 @@
 <head>
     <title>Moving Buttons</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
-    <link href="navbar.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script>
         // Load the navbar
-        fetch('navbar.html')
+        fetch('../../navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navi').innerHTML = data;
-            })
-            .catch(err => console.log('navbar not found — using fallback'));
-
-        window.requestAnimFrame = (function () {
-            return window.requestAnimationFrame ||
-                window.webkitRequestAnimationFrame ||
-                window.mozRequestAnimationFrame ||
-                function (callback) {
-                    window.setTimeout(callback, 1000 / 60);
-                };
-        })();
+            });
     </script>
 </head>
 <body>
