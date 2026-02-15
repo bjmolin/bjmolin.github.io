@@ -1,0 +1,45 @@
+/*Bryan Molina
+Program 11
+CPSC 3750
+6/29/2024*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f56600;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.div {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+h1 {
+    color: white;
+}
+
+#buttons {
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    font-size: 14px;
+}
+
+#btn1, #btn2, #btn3 {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #522D80;
+    color: white;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    // Load the navbar
+    fetch('../../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navi').innerHTML = data;
+        });
+</script>
+<head>
+    <title>Miyazaki</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <h2 id="top"></h2>
+    <div id="navi"></div>
+
+    <!-- Header Page w Image -->
+    <div class="content">
+        <div class="page-header">
+            <img src="miyazaki1.png" alt="Picture of a person" class="person-image" style="border: 5px solid black;">
+        </div>
+        <header>
+            <hi><strong>Who is Miyazaki?</strong></hi>
+        </header>
+    </div>
+
+    <!--Text-->
+    <div class="content">
+        <p>
+            Hayao Miyazaki is a Japanese animator, filmmaker, and manga artist. A founder of Studio Ghibli, he has attained
+            international acclaim as a masterful storyteller and creator of Japanese animated feature films, and is widely
+            regarded as one of the most accomplished filmmakers in the history of animation.
+            <br /><br />
+            Miyazaki expressed interest in manga and animation from an early age, and he joined Toei Animation in 1963. During
+            his early years at Toei Animation he worked as an in-between artist and later collaborated with director Isao Takahata.
+            Miyazaki co-founded Studio Ghibli in 1985. He directed numerous films with Ghibli, including Laputa: Castle in the Sky (1986),
+            My Neighbor Totoro (1988), Kiki's Delivery Service (1989), and Porco Rosso (1992). His 2001 film Spirited Away became the
+            highest-grossing film in Japanese history, winning the Academy Award for Best Animated Feature, and even till this day, serves
+            as the second highest-grossing film to date.
+            <br /><br />
+            Miyazaki's works are characterized by the recurrence of themes such as humanity's relationship with nature and
+            technology, the wholesomeness of natural and traditional patterns of living, the importance of art and craftsmanship,
+            and the difficulty of maintaining a pacifist ethic in a violent world. Miyazaki came out of retirement and announced a
+            new film in the works, which was released on December 8, 2023. The story is a representation of himself and a way to
+            finally feel satisfied with himself.
+        </p>
+
+        <!--Quote block-->
+        <div class="quote-block">
+            <blockquote>
+                "But remember this, Japanese boy... airplanes are not tools for war. They are not for making money. Airplanes
+                are beautiful dreams. Engineers turn dreams into reality."
+                <cite>- Hayao Miyazaki</cite>
+            </blockquote>
+        </div>
+
+
+        <!--Bottom img-->
+        <p style="text-align: center;">
+            <img src="miyazaki2.jpg" alt="Picture of a person" class="person-image" style="border: 5px solid black;">
+        </p>
+    </div>
+
+
+    <!--Bottom nav-->
+    <p style="text-align: center;">
+        <nav>
+            <a href="#top">Return to Top</a>
+            <a href="https://bjmolin.github.io/projects/3/page2.html">Previous Page</a>
+            <a href="https://bjmolin.github.io/projects/3/page1.html">Next Page</a>
+            <a href="mailto:bjmolin@g.clemson.edu">Email Me</a>
+        </nav>
+    </p>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bryan Molina</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    line-height: 1.6;
+    padding-bottom: 400px;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+header {
+    color: black;
+    padding: 10px 10px 5px 10px;
+    margin: 0px 0px 0px 40px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.baking-image {
+    width: 50%;
+    height: auto;
+    max-height: 300px;
+    border: 5px solid black;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.headline {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #FDA172;
+}
+
+.quote-block {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 5px solid #333;
+    background: #f9f9f9;
+    font-style: italic;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+    blockquote cite {
+        display: block;
+        margin-top: 10px;
+        text-align: right;
+        font-style: normal;
+        color: #555;
+    }
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #522D80;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+}
+
+.clemson-colors {
+    background-color: #522D80;
+    color: white;
+}

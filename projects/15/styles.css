@@ -1,0 +1,93 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f56600;
+    padding: 20px 0px 50px 0px;
+}
+
+h1 {
+    color: white;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #b80000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #c93c3c;
+    }
+
+
+#search-input {
+    margin-top: 10px;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+.channel {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+    .channel img {
+        margin-right: 20px;
+    }
+
+.channel-info {
+    text-align: left;
+}
+
+    .channel-info h2 {
+        margin: 0 0 10px;
+    }
+
+    .channel-info p {
+        margin: 5px 0;
+    }
+
+    .channel-info a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+        .channel-info a:hover {
+            text-decoration: underline;
+        }
+
+#stats-link {
+    color: blue;
+    font-size: 20px;
+    padding: 0px 10px 0px 0px;
+}
+
+#about-link {
+    color: blue;
+    font-size: 20px;
+    padding: 0px 0px 0px 10px;
+}
+
+.pdf {
+    margin: 10px 0px 90px 0px;
+}

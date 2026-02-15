@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number Checker</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+    <script>
+        function disableSubmit() {
+            document.getElementById('checkButton').disabled = true;
+        }
+    </script>
+</head>
+<body>
+  
+ <div id="navi"></div>
+  <div class="container">
+    <h1>Check Numbers</h1>
+    <form action="process.php" method="post" onsubmit="disableSubmit();">
+        <label for="numbers">Enter numbers (comma separated, max 100 numbers):</label><br>
+        <input type="text" id="numbers" name="numbers" required><br><br>
+        <input type="submit" id="checkButton" name="action" value="CHECK THESE NUMBERS">
+        <input type="submit" name="action" value="ARMSTRONG">
+        <input type="submit" name="action" value="FIBONACCI">
+        <input type="submit" name="action" value="PRIME">
+        <input type="submit" name="action" value="NONE">
+        <input type="submit" name="action" value="RESET">
+    </form>
+    <div id="result">
+        <h2>Results</h2>
+        <p id="resultContent"></p>
+    </div>
+  </div>
+</body>
+</html>

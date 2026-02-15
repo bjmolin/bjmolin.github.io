@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements Loader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <!-- Navbar injection -->
+    <div id="navi"></div>
+
+    <main>
+        <h1>Form Elements Demo</h1>
+        <form action="form-handler.php" method="post" enctype="multipart/form-data">
+            <label for="text">Text Input:</label>
+            <input type="text" id="text" name="text"><br><br>
+
+            <label for="textarea">Textarea:</label>
+            <textarea id="textarea" name="textarea"></textarea><br><br>
+
+            <input type="hidden" name="hiddenData" value="hiddenValue">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+
+            <label>Checkboxes:</label><br>
+            <input type="checkbox" name="checkboxes[]" value="Option 1"> Option 1<br>
+            <input type="checkbox" name="checkboxes[]" value="Option 2"> Option 2<br>
+            <input type="checkbox" name="checkboxes[]" value="Option 3"> Option 3<br><br>
+
+            <label>Radio Buttons:</label><br>
+            <input type="radio" name="radio" value="Radio 1"> Radio 1<br>
+            <input type="radio" name="radio" value="Radio 2"> Radio 2<br>
+            <input type="radio" name="radio" value="Radio 3"> Radio 3<br><br>
+
+            <label for="select">Selection List:</label>
+            <select id="select" name="select">
+                <option value="Option 1">Option 1</option>
+                <option value="Option 2">Option 2</option>
+                <option value="Option 3">Option 3</option>
+            </select><br><br>
+
+            <label for="file">File Upload:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url"><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

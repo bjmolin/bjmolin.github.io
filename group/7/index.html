@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Selector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    
+  <div id="navi"></div>
+  
+    <main>
+        <h1>Car Selection Page</h1>
+        <a href="car-selection.php">Go to Car Selection Page</a>
+    </main>
+</body>
+</html>

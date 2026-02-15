@@ -1,0 +1,186 @@
+body {
+    line-height: 1.6;
+    padding-bottom: 400px;
+    font-family: Arial, sans-serif;
+    background-color: #ebe1d1;
+    color: #333;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-weight: bold;
+}
+
+header {
+    color: black;
+    padding: 10px 10px 5px 10px;
+    margin: 0px 0px 0px 40px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.baking-image {
+    width: 50%;
+    height: auto;
+    max-height: 300px;
+    border: 5px solid black;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.headline {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #FDA172;
+}
+
+.quote-block {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 5px solid #333;
+    background: #f9f9f9;
+    font-style: italic;
+}
+
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-style: normal;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #522D80;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+}
+
+.clemson-colors {
+    background-color: #522D80;
+    color: white;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+#aquariumSection {
+    height: 250px;
+    background-color: #ff9900;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px 5px #d15904;
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#aquariumHeader {
+    text-align: center;
+    font-weight: bolder;
+}
+
+#aquariumSection img {
+    height: 200px;
+    border-radius: 5px;
+    border: 3px solid black;
+    width: 250px;
+}
+
+#boxModel {
+    text-align: center;
+    padding: 75px;
+    margin: 20px;
+    border: 10px solid #f1b307;
+}
+
+#unorderedList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#orderedList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#float1 {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin: 15px;
+}
+
+#basketballTable {
+    border-collapse: collapse;
+    width: 100%;
+    overflow-x: auto;
+    background-color: white;
+}
+
+#basketballTable td, #basketballTable th {
+    border: 1px solid #050505;
+    padding: 8px;
+}
+
+#basketballTable tr:hover {
+    background-color: #d7d8a3;
+}
+
+#basketballTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #522D80;
+    color: white;
+}
+
+#orderedList ol {
+    text-align: left;
+    margin: 0 auto; /* Center the ordered list within its container */
+    padding-left: 20px; 
+}
+
+#orderedList li {
+    text-align: left;
+}

@@ -1,0 +1,63 @@
+<!--
+/*
+Bryan Molina
+CPSC 3750
+07/13/24
+Prog12: AJAX & PHP
+*/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>AJAX Live Search Example</title>
+    <script type="text/javascript" src="ajax.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/Icon.png" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+
+<body>
+
+    <div id="navi"></div>
+
+    <div id="distanceSection">
+
+        <h1> Enter in two zip codes to calculate their distance</h1>
+
+        <form id="form">
+            <input type="text" id="zipcode1" pattern="\d{5}">
+            <input type="text" id="zipcode2" pattern="\d{5}">
+            <button class="button" id="numberBTN">Submit</button>
+
+        </form>
+
+        <div id="dispayNumbers">
+        </div>
+    </div>
+
+    <div id="zipcodeSection">
+        <p>
+            <strong>Search for: zipcode</strong>
+            <input type="text" size="40" id="searchlive">
+        </p>
+        <div id="results">
+            <ul id="list">
+                <li>[Search results will display here.]</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+body {
+    background-color: #f56600;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+#audio-controls {
+    margin: 20px 0;
+}
+
+#audio-controls button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: background-color 0.3s;
+}
+
+#play-pause-button, .volume-button {
+    background-color: #522D80;
+}
+
+#audio-controls button:hover {
+    opacity: 0.8;
+}
+
+audio {
+    margin: 20px 0;
+    width: 80%;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+span {
+    font-weight: bold;
+}
+
+.icon {
+    background: none; /* Remove background */
+    padding: 0; /* Remove padding */
+    color: inherit; /* Inherit color */
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Channel Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <div id="navi"></div>
+    <br />
+    <div class="container">
+        <h1 style="font-size: 60px;"><strong>YouTube Channel Search</strong></h1>
+        <br />
+        <nav style="padding: 0px 0px 10px 0px;">
+            <a href="https://bjmolin.github.io/projects/project2/stats.html" id="stats-link">◀ Stats Page</a>
+            <a href="https://bjmolin.github.io/projects/project2/about.html" id="about-link">About Page ▶</a>
+        </nav>
+        <input type="text" id="search-input" placeholder="Search for channels, @handles or blank and display trending channels...">
+        <button id="search-button">Search</button>
+        <p>Tip: Enter blank for Trending</p>
+
+        <div id="results"></div>
+        <br />
+        <hr />
+        <nav style="padding: 0px 0px 10px 0px;">
+            <a href="https://bjmolin.github.io/projects/project2/collection.html" id="stats-link">◀ OLD SITE ▶</a>
+        </nav>
+        <br />
+        <h1 style="font-size: 40px;"><strong>Usability Testing</strong></h1>
+        <object class="pdf" data="document.pdf" width="800" height="700"></object>
+    </div>
+</body>
+</html>

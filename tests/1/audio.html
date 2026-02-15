@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Demo</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+
+    <div id="navi"></div>
+    <div class="container">
+        <h1>Music App</h1>
+       <br>
+        <audio id="audio" controls>
+            <source src="song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p id="current-time">Current Time: 0:00</p>
+        <button id="rewind">Rewind 5s</button>
+        <button id="forward">Forward 5s</button>
+        <button id="toggle-play">Pause</button>
+        <button id="add-title">Add Title</button>
+        <button id="remove-title">Remove Title</button>
+        <ul id="playlist" class="playlist"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

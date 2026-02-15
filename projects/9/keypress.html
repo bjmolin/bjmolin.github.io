@@ -1,0 +1,34 @@
+<!--
+Bryan Molina
+Program 10
+CPSC 3750
+6/29/2024
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Keypress Demo</title>
+    <script type="text/javascript" src="keyboard.js"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body onkeypress="displayKey(event)" id="change-bg">
+    <!-- Navbar -->
+    <div id="navi"></div>
+
+    <div class="container">
+        <h1 id="head1">Displaying Typed Characters</h1>
+        <br />
+        <div id="change-color">
+            <p>
+                This program tracks characters via keypresses. Vowels will always be uppercase and letters 'R', 'B', and 'G' will change the background color.
+            </p>
+            <div id="keys"></div>
+        </div>
+    </div>
+</body>
+</html>
+

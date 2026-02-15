@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Channel Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <div id="navi"></div>
+    <div class="container">
+        <h1><strong>YouTube Trending Channels</strong></h1>
+        <nav style="padding: 0px 0px 10px 0px;">
+            <a href="https://bjmolin.github.io/projects/project2/about.html" style="padding: 0px 10px 0px 0px;">◀ About Page</a>
+            <a href="https://bjmolin.github.io/projects/project2/collection.html" style="padding: 0px 0px 0px 10px;">Demo Page ▶</a>
+        </nav>
+        <div class="search-container">
+            <input hidden type="text" id="search-input" placeholder="Enter channel name or handle" />
+            <button id="search-button">Refresh</button>
+        </div>
+        <div id="results" class="results"></div>
+
+    </div>
+</body>
+</html>

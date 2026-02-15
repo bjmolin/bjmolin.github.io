@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Object Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <!-- Navbar injection -->
+    <div id="navi"></div>
+
+    <h1><strong>HTML DOM Audio Object Demo</strong></h1>
+
+    <audio id="audio" src="music.mp3" controls></audio>
+
+    <div id="audio-controls">
+        <button id="play-pause-button" onclick="togglePlayPause()">
+            <span id="play-icon" class="icon">▶️ Play</span>
+            <span id="pause-icon" class="icon" style="display: none;">⏸️ Pause</span>
+        </button>
+        <button class="volume-button" onclick="increaseVolume()">Increase Volume</button>
+        <button class="volume-button" onclick="decreaseVolume()">Decrease Volume</button>
+    </div>
+
+    <p>Duration: <span id="duration">0</span></p>
+    <p>Current Time: <span id="currentTime">0:00</span></p>
+
+    <script>
+        const audio = document.getElementById('audio');
+        const playPauseButton = document.getElementById('play-pause-button');
+        const playIcon = document.getElementById('play-icon');
+        const pauseIcon = document.getElementById('pause-icon');
+
+        audio.onloadedmetadata = function () {
+            document.getElementById('duration').textContent = formatTotalTime(audio.duration);
+        };
+
+        audio.ontimeupdate = function () {
+            document.getElementById('currentTime').textContent = formatTime(audio.currentTime);
+        };
+
+        audio.onended = function () {
+            setPlayState();
+        };
+
+        function togglePlayPause() {
+            if (audio.paused) {
+                audio.play();
+                setPauseState();
+            } else {
+                audio.pause();
+                setPlayState();
+            }
+        }
+
+        function setPlayState() {
+            playIcon.style.display = 'inline';
+            pauseIcon.style.display = 'none';
+            playPauseButton.style.backgroundColor = '#4CAF50';
+        }
+
+        function setPauseState() {
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'inline';
+            playPauseButton.style.backgroundColor = '#f44336';
+        }
+
+        function increaseVolume() {
+            if (audio.volume < 1) {
+                audio.volume = Math.min(audio.volume + 0.1, 1);
+            }
+        }
+
+        function decreaseVolume() {
+            if (audio.volume > 0) {
+                audio.volume = Math.max(audio.volume - 0.1, 0);
+            }
+        }
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+        function formatTotalTime(seconds) {
+            if (seconds < 60) {
+                return `${Math.floor(seconds)} seconds`;
+            } else {
+                const minutes = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${minutes}:${secs < 10 ? '0' : ''}${secs} minutes`;
+            }
+        }
+    </script>
+</body>
+</html>

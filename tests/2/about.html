@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube Channel Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <div id="navi"></div>
+    <div class="container">
+        <h1><strong>About</strong></h1>
+        <nav style="padding: 0px 0px 10px 0px;">
+            <a href="https://bjmolin.github.io/projects/project2/collection.html" style="padding: 0px 10px 0px 0px;">◀ Demo Page</a>
+            <a href="https://bjmolin.github.io/projects/project2/stats.html" style="padding: 0px 0px 0px 10px;">Stats Page ▶</a>
+        </nav>
+        <p>
+            This API demo uses YouTube Data API v3 and will display YouTube channels via name or handle. 
+            If nothing is prompted, then the app will locate the top 100 trending apps, via the current trending videos.
+        </p>
+    </div>
+</body>
+</html>

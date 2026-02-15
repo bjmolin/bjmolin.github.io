@@ -1,0 +1,141 @@
+/* Bryan Molina
+*  06/15/2024
+*  CPSC 3750
+*  Program Exam #1
+*  Version A
+*/
+
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    background-color: #f56600;
+}
+
+h1 {
+    font-size: 34px;
+    color: white;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* Box where you enter data */
+#numInput {
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+/* Div container that holds both lists */
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.label {
+    font-size: 14px;
+}
+
+/* Each box's attributes */
+.list {
+    border: 1px solid #000;
+    border-radius: 25px;
+    padding: 10px;
+    width: 40%;
+    background-color: floralwhite;
+    transition: background-color;
+    transition-timing-function: ease-in-out;
+}
+
+/* Attributes of the list within the box */
+#primeList, #nonList {
+    list-style-type: none;
+    margin: 10px 20px;
+    text-align: center;
+    border-top: groove;
+    padding-top: 10px;
+    border-bottom: groove;
+    padding-bottom: 15px;
+}
+
+/* Label that adds up the numbers */
+#pTotal, #nonTotal {
+    border-bottom: groove;
+}
+
+/* START and SUM buttons */
+.totalButton, #makeList {
+    margin: 10px 0px 10px 0px;
+    background-color: black;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px 4px 10px;
+    border-block-style: groove;
+}
+
+/* Colors are all safe for accessibility */
+@keyframes changeColor {
+    10% {
+        background-color: #003b49;
+        color: #FFFFFF;
+    }
+
+    20% {
+        background-color: #94a596;
+        color: #003b49;
+    }
+
+    30% {
+        background-color: #dc582a;
+        color: #FFFFFF;
+    }
+
+    40% {
+        background-color: #e56db1;
+        color: #003b49;
+    }
+
+    50% {
+        background-color: #ffc845;
+        color: #003b49;
+    }
+
+    60% {
+        background-color: #00bfb2;
+        color: #1d4289;
+    }
+
+    70% {
+        background-color: #ffc845;
+        color: #1d4289;
+    }
+
+    80% {
+        background-color: #000000;
+        color: #41b6e6;
+    }
+
+    90% {
+        background-color: #5d3754;
+        color: #FFFFFF;
+    }
+
+    100% {
+        background-color: #d0d3d4;
+        color: #003b49;
+    }
+}
+
+/* This uses a transitive animation to change colors */
+.colors1 {
+    animation: changeColor 60s infinite forwards;
+}
+
+.colors2 {
+    animation: changeColor 70s infinite reverse;
+}

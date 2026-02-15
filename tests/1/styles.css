@@ -1,0 +1,51 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f56600;
+    padding: 20px;
+}
+
+h1 {
+    display: inline-block;
+    color: white;
+    padding-bottom: 10px;
+}
+
+/* General button styles */
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    margin-left: 18px;
+    position: relative;
+    top: -10px;
+}
+
+/* Specific styles for playlist buttons */
+.playlist button {
+    background-color: white;
+    color: black;
+}
+
+/* Playlist styles */
+.playlist {
+    list-style-type: none;
+    padding: 0;
+}
+
+.playlist li {
+    margin: 5px 0;
+}
+
+button {
+    margin: 5px;
+}

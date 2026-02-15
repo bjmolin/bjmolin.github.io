@@ -1,0 +1,150 @@
+<!--
+Bryan Molina
+Program 11
+CPSC 3750
+6/29/2024
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Keypress Demo</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+
+        $(document).ready(function () {
+            // Hover to turn yellow, leave to turn white
+            $(".div").hover(function () {
+                $(this).css("background-color", "yellow");
+            },
+                function () {
+                    $(this).css("background-color", "white");
+                });
+
+            // Button fade out
+            $("#btn1").click(function () {
+                $("#div1").fadeOut();
+            });
+
+            $("#btn2").click(function () {
+                $("#div2").fadeOut();
+            });
+
+            $("#btn3").click(function () {
+                $("#div3").fadeOut();
+            });
+
+            $("#datepicker").datepicker({
+                showAnim: "clip"
+            });
+
+            $("#accordion").accordion();
+
+            $("#progressbar").progressbar({
+                value: 0,
+                max: 20
+            });
+
+            var progress = 0;
+            var interval = setInterval(function () {
+                progress++;
+                $("#progressbar").progressbar("value", progress);
+                if (progress >= 20) {
+                    clearInterval(interval);
+                }
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navi"></div>
+
+
+    <div class="container">
+        <h1>Welcome to My Homepage</h1>
+
+        <h3>This is a paragraph.</h3>
+
+        <!-- Hide divs -->
+        <div id="div1" class="div">
+            <p>A paragraph in a div.</p>
+            <p>Another paragraph in a div.</p>
+        </div>
+        <br>
+
+        <div id="div2" class="div">
+            <p>A paragraph in another div.</p>
+            <p>Another paragraph in another div.</p>
+        </div>
+        <br>
+
+        <div id="div3" class="div">
+            <p>A paragraph in another div.</p>
+            <p>Another paragraph in another div.</p>
+        </div>
+
+        <!-- Buttons -->
+        <div id="buttons">
+            <button id="btn1">fade div 1</button>
+            <button id="btn2">fade div 2</button>
+            <button id="btn3">fade div 3</button>
+        </div>
+
+        <!-- Date -->
+        <h3>Date: <input type="text" id="datepicker" style="height: 18px;"></h3>
+
+        <!-- Accordion -->
+        <div id="accordion">
+            <h3>Section 1</h3>
+            <div>
+                <p>
+                    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+                </p>
+            </div>
+            <h3>Section 2</h3>
+            <div>
+                <p>
+                    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                    suscipit faucibus urna.
+                </p>
+            </div>
+            <h3>Section 3</h3>
+            <div>
+                <p>
+                    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+                </p>
+                <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                </ul>
+            </div>
+        </div>
+        <br />
+
+        <!-- Progress bar -->
+        <div id="progressbar"></div>
+    </div>
+</body>
+</html>

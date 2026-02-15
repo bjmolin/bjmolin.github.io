@@ -1,0 +1,36 @@
+/*Bryan Molina
+Program 12
+CPSC 3750
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f56600;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    font-size: 22px;
+}
+
+#keys {
+    font-size: 24px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}

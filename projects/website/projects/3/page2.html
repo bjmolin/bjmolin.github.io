@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+    // Load the navbar
+    fetch('../../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navi').innerHTML = data;
+        });
+</script>
+<head>
+    <title>Iwata</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <h2 id="top"></h2>
+    <div id="navi"></div>
+
+    <!-- Header Page w Image -->
+    <div class="content">
+        <div class="page-header">
+            <header>
+                <hi><strong>Who was Iwata?</strong></hi>
+            </header>
+            <img src="iwata1.png" alt="Picture of a person" class="person-image" style="border: 5px solid black;">
+        </div>
+    </div>
+
+    <!--Text-->
+    <div class="content">
+        <p>
+            Satoru Iwata was a Japanese businessman, video game programmer, video game designer, and producer. He was the fourth
+            president and chief executive officer (CEO) of Nintendo from 2002 until his death in 2015. Iwata was well known for
+            incorporating his humor into his Nintendo Direct videos, a series of online press conferences open to all that revealed
+            upcoming Nintendo games and products outside of typical industry channels.
+            <br /><br />
+            Born in Sapporo, Iwata expressed interest in video games from an early age and created his first simple game while
+            in high school. After showing growth at HAL Laboratory, in May 2002 he became Nintendo's president. He majored in
+            computer science at the Tokyo Institute of Technology. Under Iwata's direction, Nintendo developed the Nintendo DS
+            and Wii game consoles, helping the company achieve financial success.  In 2013, Nintendo released the Wii U console
+            as a successor to the mega-popular Wii. It was a commercial failure, pushing the company into years of losses.
+            To avoid layoffs, Iwata took a 50% pay cut to help pay for employee salaries, saying a fully-staffed Nintendo would
+            have a better chance of rebounding.
+        </p>
+
+        <!--Quote block-->
+        <div class="quote-block">
+            <blockquote>
+                "On my business card, I am a corporate president. In my mind, I am a game developer. But in my heart, I am a gamer."
+                <cite>- Satoru Iwata</cite>
+            </blockquote>
+        </div>
+
+        <p>
+            Unfortunately, in July 11, 2015, Iwata passed away leaving a huge legacy behind him. Throughout his life, Iwata was
+            known for unconventional ideas and changing the medium of gaming. He was seen as the embodiment of Nintendo: playful,
+            quirky, humorous, and fun. Iwata's proficiency in programming led many to refer to him as a "genius" in the subject,
+            with some likening him to a Japanese Bill Gates.
+        </p>
+    </div>
+
+    <!--Bottom img-->
+    <img src="iwata2.png" class="center" style="border: 5px solid black;">
+
+    <!--Bottom nav-->
+    <p style="text-align: center;">
+        <strong>Thank you Iwata.</strong>
+        <nav>
+            <a href="#top">Return to Top</a>
+            <a href="https://bjmolin.github.io/projects/3/page1.html">Previous Page</a>
+            <a href="https://bjmolin.github.io/projects/3/page3.html">Next Page</a>
+            <a href="mailto:bjmolin@g.clemson.edu">Email Me</a>
+        </nav>
+    </p>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bryan Molina</p>
+    </footer>
+
+</body>
+</html>

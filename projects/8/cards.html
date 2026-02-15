@@ -1,0 +1,66 @@
+<!--
+Bryan Molina
+Program 09 
+CPSC 3750
+6/15/2024
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+    <title>Card Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <!-- Inject navbar -->
+    <div id="navi"></div>
+
+    <div class="container">
+        <div class="container2">
+            <h1><strong>Create and Manage Cards</strong></h1>
+
+            <!-- User input form -->
+            <form id="cardForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address" required><br><br>
+
+                <label for="phone">Phone:</label><br>
+                <input type="text" id="phone" name="phone" pattern="\d*" required><br><br>
+
+                <label for="birthdate">Birthdate:</label><br>
+                <input type="date" id="birthdate" name="birthdate" required><br><br>
+            </form>
+
+            <div class="form-buttons">
+                <button onclick="createCard()">Create Card</button>
+                <button onclick="switchCardVisibility()">Hide Cards</button>
+            </div>
+        </div>
+
+        <div id="cardsContainer"></div>
+    </div>
+
+    <script src="cards.js"></script>
+</body>
+</html>

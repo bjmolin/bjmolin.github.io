@@ -1,0 +1,65 @@
+<!--
+* Bryan Molina
+* 06/15/2024
+* CPSC 3750
+* Program Exam #1
+* Version A
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+    <link href="prime.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <script src="prime.js" defer></script>
+
+</head>
+<body>
+    <!--Navbar injection-->
+    <div id="navi"></div>
+    <!--Header-->
+    <h1><strong>Prime and Non-Prime Numbers</strong></h1>
+    <div>
+        <!--Ask for input-->
+        <input id="numInput" type="number" placeholder="Enter a number" />
+        <button id="makeList" onclick="makeList()">START</button>
+    </div>
+
+    <!--Create container for both lists-->
+    <div class="container">
+        <div class="list" id="primeListFormatting">
+            <h2>List of Prime Numbers:</h2>
+            <ul id="primeList"></ul>
+            <button class="totalButton" onclick="total('primeList', 'pTotal')">SUM</button>
+            <br />
+            <label id="pTotal"></label>
+        </div>
+        <div class="list" id="nonPrimeListFormatting">
+            <h2>List of Non-Prime Numbers:</h2>
+            <ul id="nonList"></ul>
+            <button class="totalButton" onclick="total('nonList', 'nonTotal')">SUM</button>
+            <br />
+            <label id="nonTotal"></label>
+        </div>
+    </div>
+
+</body>
+</html>

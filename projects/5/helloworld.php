@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>PHP Hello World</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="navbar.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="w3-bar clemson-colors w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="https://bjmolin.github.io/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="ProjectMenu">Projects<i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="https://bjmolin.github.io/projects/2/layout.html" class="w3-bar-item w3-button">Prog02</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-padding-large w3-button" title="ProjectMenu">Prog03<i class="fa fa-caret-right"></i></button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="https://bjmolin.github.io/projects/3/page1.html" class="w3-bar-item w3-button">Reggie</a>
+                        <a href="https://bjmolin.github.io/projects/3/page2.html" class="w3-bar-item w3-button">Iwata</a>
+                        <a href="https://bjmolin.github.io/projects/3/page3.html" class="w3-bar-item w3-button">Miyazaki</a>
+                    </div>
+                </div>
+                <a href="https://bjmolin.github.io/projects/5/prog04.html" class="w3-bar-item w3-button">Prog04</a>
+                <a href="https://bjmolin.github.io/projects/6/helloworld.php" class="w3-bar-item w3-button">Prog05</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="GroupMenu">Group Act.<i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="https://bjmolin.github.io/group/2/GroupCSS2.html" class="w3-bar-item w3-button">Act. 2</a>
+            </div>
+        </div>
+    </div>
+
+  <body>
+      <h2>
+       <?php echo "Hello World!"; ?>
+      </h2>
+
+  </body>
+</html>

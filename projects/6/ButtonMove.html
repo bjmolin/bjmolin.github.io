@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title>Moving Buttons</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="navbar.css" rel="stylesheet" type="text/css">
+    <script>
+        window.requestAnimFrame = (function () {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 60);
+                };
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="w3-bar clemson-colors w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="https://bjmolin.github.io/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="ProjectMenu">Projects<i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="https://bjmolin.github.io/projects/2/layout.html" class="w3-bar-item w3-button">2. Fixed Layout</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-padding-large w3-button" title="ProjectMenu">3.  <i class="fa fa-caret-right"></i></button>
+                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                        <a href="https://bjmolin.github.io/projects/3/page1.html" class="w3-bar-item w3-button">Reggie</a>
+                        <a href="https://bjmolin.github.io/projects/3/page2.html" class="w3-bar-item w3-button">Iwata</a>
+                        <a href="https://bjmolin.github.io/projects/3/page3.html" class="w3-bar-item w3-button">Miyazaki</a>
+                    </div>
+                </div>
+                <a href="https://bjmolin.github.io/projects/5/prog04.html" class="w3-bar-item w3-button">4. Javascript Events</a>
+                <a href="https://bjmolin.github.io/projects/6/helloworld.php" class="w3-bar-item w3-button">5. PHP Helloworld</a>
+                <a href="https://bjmolin.github.io/projects/7/ButtonMove.html" class="w3-bar-item w3-button">6. Moving Buttons</a>
+                <a href="https://bjmolin.github.io/projects/8/sort.html" class="w3-bar-item w3-button">7. Sort Demo</a>
+            </div>
+        </div>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="GroupMenu">Group Act.<i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                <a href="https://bjmolin.github.io/group/2/GroupCSS2.html" class="w3-bar-item w3-button">Act. 2</a>
+            </div>
+        </div>
+    </div>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <div>
+        <select id="colorSelect">
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="white">White</option>
+        </select>
+        <button onclick="addCircle()">Add Circle</button>
+        <button id="moveButton" onclick="toggleMovement()">Move</button>
+        <button id="resetCounter" onclick="resetCounter()">Reset Counter</button>
+        <span id="circleCount">0</span>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
