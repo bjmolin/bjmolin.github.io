@@ -10,36 +10,20 @@
     <title>PHP Hello World</title>
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link href="navbar.css" rel="stylesheet" type="text/css">
+    <script>
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            })
+            .catch(err => console.log('navbar not found — using fallback'));
+    </script>
 </head>
-
 <body>
-    <!-- Navbar -->
-    <div class="w3-bar clemson-colors w3-card">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="https://bjmolin.github.io/index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-        <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="ProjectMenu">Projects<i class="fa fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="https://bjmolin.github.io/projects/2/layout.html" class="w3-bar-item w3-button">Prog02</a>
-                <div class="w3-dropdown-hover">
-                    <button class="w3-padding-large w3-button" title="ProjectMenu">Prog03<i class="fa fa-caret-right"></i></button>
-                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                        <a href="https://bjmolin.github.io/projects/3/page1.html" class="w3-bar-item w3-button">Reggie</a>
-                        <a href="https://bjmolin.github.io/projects/3/page2.html" class="w3-bar-item w3-button">Iwata</a>
-                        <a href="https://bjmolin.github.io/projects/3/page3.html" class="w3-bar-item w3-button">Miyazaki</a>
-                    </div>
-                </div>
-                <a href="https://bjmolin.github.io/projects/5/prog04.html" class="w3-bar-item w3-button">Prog04</a>
-                <a href="https://bjmolin.github.io/projects/6/helloworld.php" class="w3-bar-item w3-button">Prog05</a>
-            </div>
-        </div>
-        <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="GroupMenu">Group Act.<i class="fa fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                <a href="https://bjmolin.github.io/group/2/GroupCSS2.html" class="w3-bar-item w3-button">Act. 2</a>
-            </div>
-        </div>
-    </div>
+
+    <!-- Navbar placeholder -->
+    <div id="navi"></div>
 
     <!--Div containing buttons to change background color-->
     <div id="changeable-bg">

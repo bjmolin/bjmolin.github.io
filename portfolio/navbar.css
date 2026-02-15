@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f56600;
 }
 
 .clemson-colors {
@@ -33,4 +34,12 @@ body {
 .w3-dropdown-hover .w3-dropdown-content .w3-dropdown-hover .w3-dropdown-content {
     left: 100%;
     top: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #522D80;
+    color: #fff;
+    width: 100%;
 }

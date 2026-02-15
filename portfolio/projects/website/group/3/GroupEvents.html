@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+    <title>Group Events</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--Inject navbar-->
+    <div id="navi"></div>
+    
+    <h1>HTML Event Objects</h1>
+
+    <!-- Animation Events -->
+    <div class="animated" id="animationElement">Animation Event</div>
+    <p id="animationOutput"></p>
+
+    <!-- Drag Events -->
+    <div class="draggable" draggable="true" id="dragElement">Drag Me</div>
+    <div class="dropzone" id="dropZone">Drop Here</div>
+    <p id="dragOutput"></p>
+
+    <!-- Input Events -->
+    <input type="text" id="inputField" placeholder="Type something...">
+    <p id="inputOutput"></p>
+
+    <!-- Mouse Events -->
+    <button id="mouseButton">Mouse Event</button>
+    <p id="mouseOutput"></p>
+
+    <!-- Focus Events -->
+    <input type="text" id="focusField" placeholder="Focus on me...">
+    <p id="focusOutput"></p>
+
+    <script>
+        // Animation Events
+        const animationElement = document.getElementById('animationElement');
+        const animationOutput = document.getElementById('animationOutput');
+        animationElement.addEventListener('animationstart', () => animationOutput.textContent = 'Animation started');
+        animationElement.addEventListener('animationiteration', () => animationOutput.textContent = 'Animation iterated');
+        animationElement.addEventListener('animationend', () => animationOutput.textContent = 'Animation ended');
+
+        // Drag Events
+        const dragElement = document.getElementById('dragElement');
+        const dropZone = document.getElementById('dropZone');
+        const dragOutput = document.getElementById('dragOutput');
+        dragElement.addEventListener('dragstart', () => dragOutput.textContent = 'Dragging started');
+        dropZone.addEventListener('dragover', (e) => e.preventDefault());
+        dropZone.addEventListener('drop', () => dragOutput.textContent = 'Dropped in zone');
+
+        // Input Events
+        const inputField = document.getElementById('inputField');
+        const inputOutput = document.getElementById('inputOutput');
+        inputField.addEventListener('input', (e) => inputOutput.textContent = `Input: ${e.target.value}`);
+
+        // Mouse Events
+        const mouseButton = document.getElementById('mouseButton');
+        const mouseOutput = document.getElementById('mouseOutput');
+        mouseButton.addEventListener('click', () => mouseOutput.textContent = 'Mouse clicked');
+        mouseButton.addEventListener('mouseover', () => mouseOutput.textContent = 'Mouse over button');
+        mouseButton.addEventListener('mouseout', () => mouseOutput.textContent = 'Mouse out of button');
+
+        // Focus Events
+        const focusField = document.getElementById('focusField');
+        const focusOutput = document.getElementById('focusOutput');
+        focusField.addEventListener('focus', () => focusOutput.textContent = 'Field focused');
+        focusField.addEventListener('blur', () => focusOutput.textContent = 'Field blurred');
+    </script>
+</body>
+</html>

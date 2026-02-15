@@ -1,0 +1,75 @@
+body {
+    background-color: #f56600;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: white;
+}
+
+.animated, .draggable, .dropzone, #inputField, #mouseButton, #focusField {
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.animated {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation: mymove 5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes mymove {
+    from {transform: translateX(0);}
+    to {transform: translateX(200px);}
+}
+
+.draggable {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+}
+
+.dropzone {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#inputField, #focusField {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+#mouseButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mouseButton:hover {
+    background-color: #c0392b;
+}

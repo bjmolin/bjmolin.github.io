@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bryan Molina</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="navbar.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            })
+            .catch(err => console.log('navbar not found — using fallback'));
+    </script>
+</head>
+<body>
+
+    <!-- Navbar placeholder -->
+    <div id="navi"></div>
+
+    <!-- main portfolio content -->
+    <main style="max-width: 1200px; margin: 0 auto; padding: 0 16px;">
+        <div class="section">
+            <div class="row-split about-row">
+                <div class="image-col">
+                    <img src="me.jpg" alt="Bryan Molina">
+                </div>
+                <div class="text-col">
+                    <div class="greeting">ABOUT ME</div>
+                    <p>I am Bryan Molina, a recent Computer Science graduate with 6 months of exposure to Agile Scrum environments and 
+                    Azure DevOps. Seeking to work for front-end or/and back-end software development, creating web and API applications 
+                    to fulfill your customers’ needs.</p>
+                    <div class="w3-dropdown-hover w3-hide-small">
+                        <a href="https://bjmolin.github.io/portfolio/contact/index.html" class="w3-bar-item w3-button w3-padding-large">More Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="projects-header">PROJECTS</h2>
+        <div class="section" style="background: transparent; box-shadow: none; padding-top: 0;">
+            <div class="project-tile">
+                <div class="square">
+                    <div class="label">School Work</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="row-split work-row">
+                <div class="text-col">
+                    <div class="greeting" style="font-size: 2rem;">Work Experience</div>
+                    <p>I have done a couple internships here in SC at Milliken in Spartanburg, touching on Microsoft Development using systems such as Azure DevOps while also working in an Agile Scrum environment. 
+                        Beyond my technical field, I worked at FIVE GUYS for over 5 years while in school and have addressed countless challenges with customer service over the years.</p>
+                </div>
+                <div class="image-col">
+                    <img src="city.jpg" alt="Chicago skyline">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2026 Bryan Molina</p>
+        </footer>
+    </main>
+
+    <script>
+        document.querySelectorAll('img').forEach(img => {
+            let src = img.getAttribute('src');
+            if (src && src.includes('\\')) {
+                img.setAttribute('src', src.replace(/\\/g, '/'));
+            }
+        });
+    </script>
+</body>
+</html>
