@@ -1,0 +1,84 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #f56600;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.section {
+    margin: 32px 0;
+    padding: 24px;
+    background-color: white;
+    border-radius: 4px;
+}
+h2 {
+    color: #1e2f4b;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f56600;
+    padding-bottom: 8px;
+}
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    color: #2c3e5c;
+}
+
+.job {
+    margin-bottom: 28px;
+}
+.job-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1e2f4b;
+}
+.job-date {
+    color: #666;
+    font-size: 16px;
+}
+.job-company {
+    font-weight: 500;
+    color: #b3470c;
+    margin: 4px 0 8px 0;
+}
+.job-description {
+    margin-left: 16px;
+    padding-left: 12px;
+    border-left: 3px solid #f56600;
+}
+p {
+    line-height: 1.5;
+    margin: 8px 0;
+}
+ul {
+    padding-left: 24px;
+}
+li {
+    margin: 6px 0;
+}
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.skill-list li {
+    background: #f0f0f0;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 16px;
+    border-left: 4px solid #f56600;
+}

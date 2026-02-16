@@ -1,90 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bryan Molina</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="navbar.css" rel="stylesheet" type="text/css">
+    <title>Experience</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../navbar.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
-        // Load the navbar
         fetch('navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navi').innerHTML = data;
             })
-            .catch(err => console.log('navbar not found — using fallback'));
+            .catch(() => {});
     </script>
 </head>
 <body>
-
-    <!-- Navbar placeholder -->
     <div id="navi"></div>
 
-    <!-- About me -->
-    <main style="max-width: 1200px; margin: 0 auto; padding: 0 16px;">
-        <div class="section">
-            <div class="row-split about-row">
-                <div class="image-col">
-                    <img src="resources/me.jpg" alt="Bryan Molina">
+    <div class="content">
+        
+        <div class="section w3-card">
+            <h2>Experience</h2>
+            <p style="font-size:18px;">I am a recent graduate from Clemson looking for an opportunity to show my desire to work. 
+                I’ve worked within customer service for various years and have done a couple internships here in SC at Milliken in Spartanburg, touching on Microsoft Development using systems such as Azure DevOps while also working in an Agile Scrum environment. 
+                In addition, I have also worked with Django and used it to make an extensive application in Senior Practicum at Clemson.
+            </p>
+        </div>
+
+        <div class="section w3-card">
+            <div class="job">
+                <div class="job-header">
+                    <span>Microsoft Developer Internship</span>
                 </div>
-                <div class="text-col">
-                    <div class="greeting">ABOUT ME</div>
-                    <p>I am Bryan Molina, a recent Computer Science graduate with 6 months of exposure to Agile Scrum environments and 
-                    Azure DevOps. Seeking to work for front-end or/and back-end software development, creating web and API applications 
-                    to fulfill your customers’ needs.</p>
-                    <div class="w3-dropdown-hover w3-hide-small">
-                        <a href="https://bjmolin.github.io/portfolio/aboutme/index.html" class="w3-bar-item w3-button w3-padding-large">More Info</a>
-                    </div>
+                <div class="job-company">Milliken & Company</div>
+                <div class="job">
+                <p>During 5/22 – 8/22 and 5/23-8/23, I had the opportunity to work as a Microsoft Developer Intern at Milliken & Company. While there, I: </p>
+                <p> •	Worked with my mentor developing an API application within a greenfield environment. </p>
+                <p> •	Was able to upgrade over 20% of applications to the latest .NET version and compiled a wiki with full documentation of my process and debugging for any future upgrades needed.</p>
+                <p> •	Worked in an Agile Scrum environment, which familiarized me with daily scrum tasks and expectations.</p>
+                </p>
+                </div>
+            </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span>Clemson Coursework</span>
+            </div>
+            <div class="job">
+                <p>Some of my course work at Clemson included:</p>
+                <p>•	Developing web applications and managing a SQL database. </p>                
+                <p>•	Learning Software Engineering Methodologies, such as SOLID and OOP principles.</p>
+                <p>•	Developing a driving incentive program in Django within a 4 month period with Agile Scrum practices. </p>
+                <p> - In Django, I worked on: creating a catalog of products that made use of Spotify’s API, using Cognito to create user accounts, creating an order system, 
+                    creating a ticket system for users to communicate with, and various webpages for extracting sales and order information.</p>
+                <div class="w3-dropdown-hover w3-hide-small">
+                    <a href="https://docs.google.com/presentation/d/1eWKKzok_BQTUjnnVDjTo7p0LBEB1sKkT1WXsOniclBE/edit?usp=sharing class="w3-bar-item w3-button w3-padding-large">Django Presentation</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span>Outside Tech</span>
+                    
+                </div>
+                <p>Beyond my technical field, I worked at FIVE GUYS for over 5 years while in school and have addressed countless challenges with customer service over the years.</p>
+                <div class="job-company">FIVE GUYS --------------- 1/17 – 8/22</div>
+                <div class="job-description">
+                    <p>Worked as a shift leader for over a year. Worked all positions and increased my pay by over 50%. The work consisted of active communication, collaboration, pressure, and competitive pay.</p>
+                </div>
+            </div>
+
+            <div class="job">
+                <div class="job-company">UBreakIFix --------------- 4/21 – 7/21</div>
+                <div class="job-description">
+                    <p>Technician and Sales Rep. for a phone tech company, consisting of up sales, competitive pay and resourcefulness. Learned about phone components and how to replace them on iPhones and Samsung Galaxies.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Projects -->
-        <h2 class="projects-header">PROJECTS</h2>
-        <div class="section" style="background: transparent; box-shadow: none; padding-top: 0;">
-            <div class="project-tile">
-                <a href="https://bjmolin.github.io/projects/index.html">
-                    <div class="square" style="background-image: url('resources/Clemson-Paw.jpg');">
-                        <div class="label">School Work</div>
-                    </div>
-                </a>
-            </div>
+        <!-- Relevant Coursework -->
+        <div class="section w3-card">
+            <h2>Relevant Coursework</h2>
+            <ul>
+                <li>Senior Computing Practicum (Python)</li>
+                <li>Software Engineering methodologies (Java)</li>
+                <li>Software Development Foundations (Java)</li>
+                <li>Web Application Development (SQL and JS)</li>
+                <li>Networking with Ubuntu Linux (C++)</li>
+            </ul>
         </div>
 
-        <!-- Work Exp. -->
-        <div class="section">
-            <div class="row-split work-row">
-                <div class="text-col">
-                    <div class="greeting" style="font-size: 2rem;">Work Experience</div>
-                    <p>I have done a couple internships at Milliken in Spartanburg, touching on Microsoft Development using systems such as Azure DevOps while also working in an Agile Scrum environment.</p>
-                </div>
-                <div class="image-col">
-                    <img src="resources/city.jpg" alt="Chicago skyline">
-                </div>
-                
-            </div>
-            <div class="w3-dropdown-hover w3-hide-small">
-                        <a href="https://bjmolin.github.io/portfolio/experience/index.html" class="w3-bar-item w3-button w3-padding-large">More Info</a>
-            </div>
-        </div>  
+        <!-- Key Skills -->
+        <div class="section w3-card">
+            <h2>Key Skills</h2>
+            <h3>Technical & Methodologies</h3>
+            <ul class="skill-list">
+                <li>Agile Scrum</li>
+                <li>DevOps workflow</li>
+                <li>C++</li>
+                <li>C#</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>.NET upgrade</li>
+                <li>Azure DevOps</li>
+                <li>API development</li>
+            </ul>
 
-
+            <h3 style="margin-top:24px;">Languages & Soft Skills</h3>
+            <ul class="skill-list">
+                <li>Native Spanish</li>
+                <li>70+ hours/week resilience</li>
+                <li>Active communication</li>
+                <li>Collaboration</li>
+                <li>Upsales experience</li>
+                <li>Resourcefulness</li>
+            </ul>
+        </div>
         <footer>
             <p>&copy; 2026 Bryan Molina</p>
         </footer>
-    </main>
+    </div>
 
-    <script>
-        document.querySelectorAll('img').forEach(img => {
-            let src = img.getAttribute('src');
-            if (src && src.includes('\\')) {
-                img.setAttribute('src', src.replace(/\\/g, '/'));
-            }
-        });
-    </script>
 </body>
 </html>

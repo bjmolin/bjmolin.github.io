@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bryan Molina · all links</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="navbar.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        // Load the navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            })
+            .catch(err => console.log('navbar not found — using fallback'));
+    </script>
+</head>
+<body>
+
+    <!-- Navbar placeholder -->
+    <div id="navi"></div>
+
+    <div class="content">
+
+        <div class="section w3-card">
+            <h2>Projects</h2>
+            <p style="margin-bottom:24px;">This page is under construction, but links to all hosted projects are here!</p>
+
+            <h3>HTML Demos and Practice</h3>
+            <ul>
+                <li><a href="https://bjmolin.github.io/projects/1/GroupEvents.html">HTML Practice</a> <span class="link-meta">(projects/1/GroupEvents.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/2/ButtonMove.html">Button Addition</a> <span class="link-meta">(projects/2/ButtonMove.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/3/GroupAudio.html">Music 1</a> <span class="link-meta">(projects/3/GroupAudio.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/4/audio.html">Music 2</a> <span class="link-meta">(projects/4/audio.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/5/index.html">Color Tracker</a> <span class="link-meta">(projects/5/index.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/6/collection.html">YouTube API demo</a> <span class="link-meta">(projects/6/collection.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/7/cards.html">Card Maker</a> <span class="link-meta">(projects/7/cards.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/8/sort.html">Sorted Names</a> <span class="link-meta">(projects/8/sort.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/9/keypress.html">Keyboard</a> <span class="link-meta">(projects/9/keypress.html)</span></li>
+                <li><a href="https://bjmolin.github.io/projects/10/jquery.html">JQuery Practice</a> <span class="link-meta">(projects/10/jquery.html)</span></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 Bryan Molina</p>
+    </footer>
+
+</body>
+</html>
