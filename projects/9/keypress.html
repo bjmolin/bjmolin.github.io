@@ -1,10 +1,3 @@
-<!--
-Bryan Molina
-Program 10
-CPSC 3750
-6/29/2024
--->
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -14,10 +7,24 @@ CPSC 3750
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link href="../../navbar.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
 </head>
 <body onkeypress="displayKey(event)" id="change-bg">
     <!-- Navbar -->
     <div id="navi"></div>
+
+    <div class="quote-block">
+        <blockquote>
+            This programs tracks keypresses and will change colors if R, B or G are pressed. Vowels will always be uppercase and all other characters will be lowercase.
+        </blockquote>
+    </div>
 
     <div class="container">
         <h1 id="head1">Displaying Typed Characters</h1>
