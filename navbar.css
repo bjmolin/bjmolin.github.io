@@ -36,14 +36,49 @@ body {
     top: 0;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #522D80;
-    color: #fff;
-    width: 100%;
+.w3-bar .w3-bar-item {
+    padding-top: 14px;
+    padding-bottom: 14px;
 }
 
+#mobileMenu {
+    background-color: #f56600;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}   
+#mobileMenu a {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 14px 20px;
+    font-size: 1.05rem;
+    transition: background 0.2s;
+}
+
+#mobileMenu a:hover {
+    background-color: #d45500;
+}
+
+#mobileMenu .project-sub {
+    padding-left: 40px !important;
+    font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#mobileMenu .project-header {
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+#mobileMenu .project-header i {
+    margin-right: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #522D80;
+    color: #fff;
+}
 .quote-block {
     margin: 20px 0;
     padding: 10px 20px;
