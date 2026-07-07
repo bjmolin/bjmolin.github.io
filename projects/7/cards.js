@@ -1,8 +1,3 @@
-//Bryan Molina
-//Program 09 
-//CPSC 3750
-//6 / 15 / 2024
-
 // Define the Card object and printCard function
 function printCard() {
     var nameLine = "<strong>Name: </strong>" + this.name + "<br>";
@@ -25,7 +20,6 @@ function Card(name, email, address, phone, birthdate) {
 var cards = [];
 
 function createCard() {
-    // Validate the form before creating a card
     if (!verify()) {
         return;
     }
@@ -101,7 +95,7 @@ function switchCardVisibility() {
 // Function to delete a specific card
 function deleteCard(index) {
     cards.splice(index, 1);
-    showCards(); // Show updated list of cards
+    showCards();
 }
 
 // Function to validate form inputs
