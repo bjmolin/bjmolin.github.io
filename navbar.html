@@ -18,10 +18,94 @@
             <a href="https://bjmolin.github.io/projects/10/jquery.html" class="w3-bar-item w3-button">JQuery Practice</a>
         </div>
     </div>
-    <div class="w3-dropdown-hover w3-hide-small">
-        <a href="https://bjmolin.github.io/experience/0/index.html" class="w3-bar-item w3-button w3-padding-large">Experience</a>
-    </div>
-    <div class="w3-dropdown-hover w3-hide-small">
-        <a href="https://bjmolin.github.io/aboutme/0/index.html" class="w3-bar-item w3-button w3-padding-large">About Me</a>
+    <a href="https://bjmolin.github.io/experience/0/index.html"
+       class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+       Experience
+    </a>
+    <a href="https://bjmolin.github.io/aboutme/0/index.html"
+       class="w3-bar-item w3-button w3-padding-large w3-hide-small">
+       About Me
+    </a>
+
+    <div id="mobileMenu"
+         class="w3-bar-block w3-hide w3-hide-large w3-card-4"
+         style="position:absolute; left:0; right:0; z-index:999;">
+
+        <a href="https://bjmolin.github.io/"
+           class="w3-bar-item w3-button">
+           <i class="fa fa-home"></i> HOME
+        </a>
+
+        <a href="https://bjmolin.github.io/projects/0/index.html"
+           class="w3-bar-item w3-button project-header">
+           <i class="fa fa-folder-open"></i> Projects
+        </a>
+        <a href="https://bjmolin.github.io/projects/1/GroupEvents.html"
+           class="w3-bar-item w3-button project-sub">HTML Practice</a>
+        <a href="https://bjmolin.github.io/projects/2/ButtonMove.html"
+           class="w3-bar-item w3-button project-sub">Button Addition</a>
+        <a href="https://bjmolin.github.io/projects/3/GroupAudio.html"
+           class="w3-bar-item w3-button project-sub">Music 1</a>
+        <a href="https://bjmolin.github.io/projects/4/audio.html"
+           class="w3-bar-item w3-button project-sub">Music 2</a>
+        <a href="https://bjmolin.github.io/projects/5/index.html"
+           class="w3-bar-item w3-button project-sub">Color Tracker</a>
+        <a href="https://bjmolin.github.io/projects/6/collection.html"
+           class="w3-bar-item w3-button project-sub">YouTube API demo</a>
+        <a href="https://bjmolin.github.io/projects/7/cards.html"
+           class="w3-bar-item w3-button project-sub">Card Maker</a>
+        <a href="https://bjmolin.github.io/projects/8/sort.html"
+           class="w3-bar-item w3-button project-sub">Sorted Names</a>
+        <a href="https://bjmolin.github.io/projects/9/keypress.html"
+           class="w3-bar-item w3-button project-sub">Keyboard</a>
+        <a href="https://bjmolin.github.io/projects/10/jquery.html"
+           class="w3-bar-item w3-button project-sub">JQuery Practice</a>
+
+        <a href="https://bjmolin.github.io/experience/0/index.html"
+           class="w3-bar-item w3-button">
+           <i class="fa fa-briefcase"></i> Experience
+        </a>
+
+        <a href="https://bjmolin.github.io/aboutme/0/index.html"
+           class="w3-bar-item w3-button">
+           <i class="fa fa-user"></i> About Me
+        </a>
     </div>
 </div>
+
+<script>
+(function() {
+    window.myFunction = function() {
+        var menu = document.getElementById("mobileMenu");
+        if (!menu) return;
+        if (menu.classList.contains("w3-show")) {
+            menu.classList.remove("w3-show");
+            menu.classList.add("w3-hide");
+        } else {
+            menu.classList.remove("w3-hide");
+            menu.classList.add("w3-show");
+        }
+    };
+
+    function setupOutsideClose() {
+        if (window._navOutsideSetup) return;
+        window._navOutsideSetup = true;
+
+        document.addEventListener("click", function(event) {
+            var nav = document.getElementById("navi");
+            var menu = document.getElementById("mobileMenu");
+            if (!nav || !menu) return;
+            if (!nav.contains(event.target) && menu.classList.contains("w3-show")) {
+                menu.classList.remove("w3-show");
+                menu.classList.add("w3-hide");
+            }
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', setupOutsideClose);
+    } else {
+        setupOutsideClose();
+    }
+})();
+</script>
