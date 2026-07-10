@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Experience</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="../../navbar.css" rel="stylesheet" type="text/css">
+    <script src="../../navbar.js" defer></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        // Load the navbar
+        fetch('../../navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navi').innerHTML = data;
+            });
+    </script>
+</head>
+<body>
+    <div id="navi"></div>
+
+    <div class="content">
+        <div class="section w3-card">
+            
+            <div class="job">
+                <h2>Recreational Projects</h2>
+                <div class="job">
+                    <p style="padding-bottom: 10px;">I really enjoy learning how things work and customizing my experience with games and programs! 
+                        Sometimes I'll mess around in blender, creating and editing 3D fictional characters. 
+                    </p>
+                    <p style="padding-bottom: 10px;">
+                        A project I did back in high school was attempting to add my best friend to Super Smash Bros. Brawl for the Wii using a custom made 3D 
+                        model made from scratch and community tools for hacking and modding the mentioned game. I tracked my journey with this 
+                        <a href="https://bryanmolina1.wixsite.com/mfjvg">Wix Site</a>.
+                    </p>
+                    <p>
+                        Unfortunately, despite my best efforts, I was not able to make him playable within the game but I did end up with a 3D model of him. 
+                        Years later, I undusted his model and attempted to add him to the newest iteration of the game using community tools and guides. 
+                        Here are pictures of him in action! 
+                    </p>
+                    <p>
+                        More fun stuff to be added soon! 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-box">
+            <div class="scroll-container" id="scrollContainer">
+                <img src="1.png" alt="3D Model">
+                <img src="2.jpg" alt="Fighting">
+                <img src="3.jpg" alt="Winning">
+                <img src="4.jpg" alt="Falling">
+            </div> 
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
+                <img id="lightboxImg" src="" alt="Enlarged">
+                <div class="img-caption" id="captionText">Image</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Bryan Molina</p>
+        </footer>
+    </div>
+
+    <script>
+        (function() {
+            const images = document.querySelectorAll('.scroll-container img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const caption = document.getElementById('captionText');
+            const closeBtn = document.getElementById('closeBtn');
+
+            function openLightbox(img) {
+                const src = img.getAttribute('src');
+                const alt = img.getAttribute('alt') || 'Image';
+                lightboxImg.src = src;
+                lightboxImg.alt = alt;
+                caption.textContent = alt;
+                lightbox.classList.add('visible');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('visible');
+                document.body.style.overflow = '';
+            }
+
+            images.forEach(img => {
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openLightbox(this);
+                });
+            });
+
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeLightbox();
+            });
+
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('visible')) {
+                    closeLightbox();
+                }
+            });
+
+            lightbox.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+            }, { passive: false });
+
+            lightboxImg.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            caption.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+
+            console.log('Click any image to enlarge.');
+        })();
+    </script>
+</body>
+</html>

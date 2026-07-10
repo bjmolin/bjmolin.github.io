@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    background-color: #f56600;
+    margin: 0;
+    padding: 12px;
+
+}
+
+.content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.section {
+    margin: 32px 0;
+    padding: 24px;
+    background-color: white;
+    border-radius: 4px;
+}
+h2 {
+    color: #1e2f4b;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f56600;
+    padding-bottom: 8px;
+}
+h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 20px 0 10px 0;
+    color: #2c3e5c;
+}
+
+.job {
+    margin-bottom: 28px;
+}
+.job-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1e2f4b;
+}
+.job-date {
+    color: #666;
+    font-size: 16px;
+}
+.job-company {
+    font-weight: 500;
+    color: #b3470c;
+    margin: 4px 0 8px 0;
+}
+.job-description {
+    margin-left: 16px;
+    padding-left: 12px;
+    border-left: 3px solid #f56600;
+}
+p {
+    line-height: 1.5;
+    margin: 8px 0;
+}
+ul {
+    padding-left: 24px;
+}
+li {
+    margin: 6px 0;
+}
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+.skill-list li {
+    background: #f0f0f0;
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 16px;
+    border-left: 4px solid #f56600;
+}
+
+/* new scroll styles */
+.scroll-container {
+    background-color: rgba(255, 245, 235, 0.85);
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 12px 8px;
+    border-radius: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    -webkit-overflow-scrolling: touch;
+}
+.scroll-container::-webkit-scrollbar {
+    height: 6px;
+    background: #555;
+    border-radius: 8px;
+}
+.scroll-container img {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 14px;
+    background: #1a1a1a;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.1s;
+    display: inline-block;
+}
+.scroll-container img:hover {
+    border-color: #f56600;
+}
+.scroll-container img:active {
+    border-color: #fff;
+    transform: scale(0.96);
+}
+.gallery-box {
+    max-width: 1000px;
+    width: 100%;
+    background: #522D80;
+    border-radius: 20px;
+    padding: 20px 16px;
+    margin-bottom: 30px;
+}
+
+/* lightbox */
+.lightbox {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 20px;
+}
+.lightbox.visible {
+    display: flex;
+}
+.lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.lightbox-content img {
+    max-width: 85vw;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 18px;
+    background: #111;
+    border: 3px solid #eee;
+}
+
+.close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 2.2rem;
+    font-weight: 300;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.1s;
+    line-height: 1;
+    padding: 0;
+    touch-action: manipulation;
+    user-select: none;
+}
+
+.close-btn:hover {
+    background: rgba(180, 40, 40, 0.8);
+}
+.close-btn:active {
+    transform: scale(0.92);
+}
+
+.img-caption {
+    margin-top: 10px;
+    color: #ddd;
+    background: black;
+    padding: 4px 18px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

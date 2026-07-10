@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Driver Incentive App</title>
+    <title>Experience</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles.css" rel="stylesheet" type="text/css">
@@ -18,64 +18,184 @@
                 document.getElementById('navi').innerHTML = data;
             });
     </script>
-    <title>Projects</title>
 </head>
 <body>
-    <!-- Navbar placeholder -->
     <div id="navi"></div>
 
     <div class="content">
-
         <div class="section w3-card">
+            
+            <div class="job">
+                <h2>MangoDjango</h2>
+                <div class="job">
+                    <p style="padding-bottom: 10px;">The driver incentive app was a CPSC 4910 (Senior Computing Practicum) project that was designed to help sponsors encourage 
+                        drivers to be safer on the road. Good driving is rewarded with a point system that allows drivers to exchange their 
+                        points for items their sponsor would provide. 
+                    </p>
+                    <p style="padding-bottom: 10px;">
+                        Our project was developed and deployed using the Django framework and a MySQL database. Our UI was built with 
+                        Bootstrap and we secured user authentication using AWS Cognito. The entire infrastructure was hosted on an AWS RDS 
+                        instance and we made weekly commits through Azure DevOps. The project was created within a 4 month period and practiced 
+                        AGILE Scrum style weekly meeting and planning. Every week consisted of delegated user stories and tasks through Azure DevOps.
+                    </p>
+                    <p>
+                        My work in this project heavily consisted of creating a catalog of products that made use of Spotify's API, 
+                        developing account creation using Cognito, creating an order system, creating an ticket report system and various 
+                        webpages for extracting sales and order information. 
+                    </p>
+                </div>
+            </div>
+
             <div class="job">
                 <div class="job-header">
-                    <span>MangoDjango</span>
+                    <span>Challenges</span>
                 </div>
                 <div class="job">
-                <p>The driver incentive app was a CPSC 4910 (Senior Computing Practicum) project that was designed to help sponsors encourage 
-                    drivers to be safer on the road. Good driving is rewarded with a point system that allows drivers to exchange their 
-                    points for items their sponsor would provide. 
-                </p>
-                <br>
-                <p>
-                    Our project was developed and deployed using the Django framework and a MySQL database. Our UI was built with 
-                    Bootstrap and we secured user authentication using AWS Cognito. The entire infrastructure was hosted on an AWS EC2 
-                    instance. The project was created within a 4 month period and practiced AGILE Scrum style weekly meeting and planning.
-                </p>
-                <br>
-                <p>
-                    My work in this project heavily consisted of creating a catalog of products that made use of Spotify's API, 
-                    developing account creation using Cognito, creating an order system, creating an ticket report system and various 
-                    webpages for extracting sales and order information.
-                </p>
-
-
-
-                <p>
-                    Other project notes: 
-                    - Theme is colored around mangos 
-                    - Spotify's API was free to use and used as the catalog to search and "purchase" an item. 
-                    - 
-                </p>
+                    <p style="padding-bottom: 10px;">The project had 2 major challenges that we faced. The first was establishing each type of user and their complexity. 
+                        There were 3 type of users and thus created a few layers of depth each user would require: drivers, sponsors, and admins. 
+                        Every sponsor had a list of driver users asigned to monitor (change points, see tickets, add or suspend driver), reject 
+                        and approve purchase orders, and view total sales in purchases. Meanwhile, driver users could have multiple sponsors 
+                        (in case a driver had more than 1 job or company they worked for), could redeem their points for a reward from their 
+                        sponsor's catalog, and request to leave a sponsor. 
+                    </p>
+                    <p>
+                        The second challenge was improving security on our website. We used AWS Cognito to secure user authentication and password 
+                        resetting. Resetting would involve receiving a code through the account's provided email to reset the account's password. 
+                        We also used CSRF/SQLi protection to strip user input from injecting malicious code or commands. 
+                    </p>
                 </div>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span>Professional Development Skill</span>
+                    
+                </div>
+                <p>One of our requirements was to go above and beyond meeting the specifications for the app. This meant the creative freedom 
+                    to develop a useful tool of our choice. An example could be making our web app a mobile app. For this requirement, I developed 
+                    a ticketing system that all users could use to communicate with each other. Every user had a ticket dashboard. If a driver noticed 
+                    their points missing or wants to rectify an adjustment to their orders, they could create a ticket and select what kind of issue 
+                    they are having. Their ticket would be recevied by their selected sponsor and the sponsor would be able to reply back and update the 
+                    status of the tickets. If sponsors have issues outside their technical capabilities, they could also create tickets that admins would 
+                    receive. In short, I created a ticketing system with a message chat where users could communicate back and forth.
+                </p>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <span>Other project notes:</span>
+                </div>
+                <ul>
+                    <li>The project did not involve using any kind of GPS tracking or conditions to obtain points. In a real scenario, 
+                        the sponsor would set the rules and conditions for rewarding points for good driving behavior.</li>
+                    <li>Spotify's API was free to use and used as the catalog to search and "purchase" an item. </li>
+                    <li>Theme is colored around mangos </li>
+                    <li><a href="https://docs.google.com/presentation/d/1eWKKzok_BQTUjnnVDjTo7p0LBEB1sKkT1WXsOniclBE/edit?usp=sharing">Group Presentation</a></li>
+                </ul>
             </div>
         </div>
 
-        <div class="image-col">
-            <img src="dashboard.png" alt="Order Dashboard">
+        <div class="gallery-box">
+            <div class="scroll-container" id="scrollContainer">
+                <img src="1.png" alt="Order Dashboard">
+                <img src="2.png" alt="Create Ticket">
+                <img src="3.png" alt="Assigned Tickets">
+                <img src="4.png" alt="Created Tickets">
+                <img src="5.png" alt="Ticket Conversation">
+                <img src="6.png" alt="Spotify Catalog">
+                <img src="7.png" alt="Muse Search">
+                <img src="8.png" alt="Purchase Report">
+                <img src="10.png" alt="Azure DevOps">
+            </div> 
         </div>
 
-        <div class="image-col">
-            <img src="spotifyapi.png" alt="Catalog API">
+        <div class="lightbox" id="lightbox">
+            <div class="lightbox-content">
+                <button class="close-btn" id="closeBtn" aria-label="Close">✕</button>
+                <img id="lightboxImg" src="" alt="Enlarged">
+                <div class="img-caption" id="captionText">Image</div>
+            </div>
         </div>
 
-        <div class="image-col">
-            <img src="ticket.png" alt="Create Ticket">
-        </div>
+        <iframe
+            src="databasediagram.pdf"
+            width="100%"
+            height="600px"
+            style="border: none;"
+        ></iframe>
 
-        <div class="w3-dropdown-hover w3-hide-small">
-            <a href="https://docs.google.com/presentation/d/1eWKKzok_BQTUjnnVDjTo7p0LBEB1sKkT1WXsOniclBE/edit?usp=sharing class="w3-bar-item w3-button w3-padding-large">Django Presentation</a>
-        </div>
+        <iframe
+            src="userstories.pdf"
+            width="100%"
+            height="600px"
+            style="border: none;"
+        ></iframe>
 
+        <footer>
+            <p>&copy; 2026 Bryan Molina</p>
+        </footer>
+    </div>
+
+    <script>
+        (function() {
+            const images = document.querySelectorAll('.scroll-container img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const caption = document.getElementById('captionText');
+            const closeBtn = document.getElementById('closeBtn');
+
+            function openLightbox(img) {
+                const src = img.getAttribute('src');
+                const alt = img.getAttribute('alt') || 'Image';
+                lightboxImg.src = src;
+                lightboxImg.alt = alt;
+                caption.textContent = alt;
+                lightbox.classList.add('visible');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('visible');
+                document.body.style.overflow = '';
+            }
+
+            images.forEach(img => {
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openLightbox(this);
+                });
+            });
+
+            closeBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeLightbox();
+            });
+
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('visible')) {
+                    closeLightbox();
+                }
+            });
+
+            lightbox.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+            }, { passive: false });
+
+            lightboxImg.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+            caption.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+
+            console.log('Click any image to enlarge.');
+        })();
+    </script>
 </body>
 </html>

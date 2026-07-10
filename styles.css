@@ -13,7 +13,6 @@ body {
     padding: 1rem 1.5rem;
     background-color: rgba(255, 245, 235, 0.85);
     border-radius: 2rem;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .row-split {
@@ -60,16 +59,24 @@ body {
 .square {
     width: 320px;
     height: 320px;
-    background-image: url('Clemson-Paw.jpg'); 
     background-size: cover;
     background-position: center;
     border: 4px solid white;
     border-radius: 18px;
-    box-shadow: 0 12px 25px rgba(0,0,0,0.5);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0px 15px 0px 15px;
 }
+
+.square:hover{
+    border-color: #522D80;
+}
+.square:active{
+    border-color: blue;
+    transform: scale(0.96);
+}
+
 .label {
     background-color: rgba(0, 0, 0, 0.3); 
     color: white;
@@ -81,7 +88,6 @@ body {
     text-align: center;
     backdrop-filter: blur(2px); 
     border: 1px solid rgba(255,255,255,0.4);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 .about-row .image-col {
     order: 1; 
