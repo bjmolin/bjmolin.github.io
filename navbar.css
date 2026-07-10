@@ -1,8 +1,18 @@
+#navi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f56600;
+    padding-top: 80px;
+    padding: 12px;
 }
 
 .clemson-colors {

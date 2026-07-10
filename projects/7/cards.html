@@ -13,10 +13,37 @@
     <script>
         // Load the navbar
         fetch('../../navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navi').innerHTML = data;
-            });
+    .then(response => response.text())
+    .then(data => {
+        // Create the #navi container
+        const naviContainer = document.createElement('div');
+        naviContainer.id = 'navi';
+        naviContainer.innerHTML = data;
+        
+        // Insert at the beginning of body
+        document.body.insertBefore(naviContainer, document.body.firstChild);
+        
+        // Dynamically set body padding-top based on actual navbar height
+        const setNavbarPadding = () => {
+            const navbarHeight = naviContainer.offsetHeight;
+            // Preserve existing body padding while adding navbar space
+            const currentPadding = window.getComputedStyle(document.body).paddingTop;
+            // Only set if navbar exists
+            if (navbarHeight > 0) {
+                document.body.style.paddingTop = navbarHeight + 'px';
+            }
+        };
+        
+        // Set padding after render
+        requestAnimationFrame(setNavbarPadding);
+        
+        // Update on resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(setNavbarPadding, 250);
+        });
+    });
     </script>
     
 </head>

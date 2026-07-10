@@ -1,30 +1,4 @@
 (function() {
-    fetch('../../navbar.html')
-    .then(response => response.text())
-    .then(data => {
-        const naviContainer = document.createElement('div');
-        naviContainer.id = 'navi';
-        naviContainer.innerHTML = data;
-        
-        document.body.insertBefore(naviContainer, document.body.firstChild);
-        
-        const setNavbarPadding = () => {
-            const navbarHeight = naviContainer.offsetHeight;
-            const currentPadding = window.getComputedStyle(document.body).paddingTop;
-            if (navbarHeight > 0) {
-                document.body.style.paddingTop = navbarHeight + 'px';
-            }
-        };
-        
-        requestAnimationFrame(setNavbarPadding);
-        
-        let resizeTimeout;
-        window.addEventListener('resize', () => {
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(setNavbarPadding, 250);
-        });
-    });
-    
     window.myFunction = function() {
         var menu = document.getElementById("mobileMenu");
         if (!menu) return;
